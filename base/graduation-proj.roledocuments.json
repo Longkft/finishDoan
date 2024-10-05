@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "66e94128f36d167730c97601"
+  },
+  "rol_name": "superadmin",
+  "rol_description": "extend from superadmin",
+  "rol_status": "active",
+  "rol_grants": [
+    {
+      "resourceId": {
+        "$oid": "66e94080f36d167730c975fc"
+      },
+      "actions": [
+        "create:any",
+        "update:any",
+        "read:any",
+        "delete:any"
+      ],
+      "attributes": "*"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66ea8d10d6f0560b9d1ae539"
+  },
+  "rol_name": "admin",
+  "rol_description": "extend from admin",
+  "rol_status": "active",
+  "rol_grants": [
+    {
+      "resourceId": {
+        "$oid": "66e94080f36d167730c975fc"
+      },
+      "actions": [
+        "create:own",
+        "update:own",
+        "read:any",
+        "delete:own"
+      ],
+      "attributes": "*"
+    }
+  ]
+}]
