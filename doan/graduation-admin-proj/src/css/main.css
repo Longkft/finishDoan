@@ -1,0 +1,456 @@
+@import url('./style.css');
+@import url('./style.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 72.5%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #f9f9f9;
+    --blue: #2a2185;
+    --light-blue: #cfe8ff;
+    --grey: #eee;
+    --dark-grey: #aaaaaa;
+    --dark: #342e37;
+    --red: #db504a;
+    --yellow: #ffce26;
+    --light-yellow: #fff2c6;
+    --orange: #fd7238;
+    --light-orange: #ffe0d3;
+
+    --stark-light-blue: #00fffc;
+    --stark-med-blue: #00a4a2;
+
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #1565c0;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #1f1f1f;
+    font-weight: 700;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeff1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+iframe {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+/* Custom checkbox */
+.chkCustom {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.chkCustom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.chkCheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 2px solid #afafaf;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.chkCustom input:checked ~ .chkCheckmark {
+    background-color: #50b83c;
+    border: 2px solid #50b83c;
+}
+
+.chkCustom input:focus ~ .chkCheckmark {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(115, 198, 99, 0.4);
+}
+
+.chkCheckmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.chkCustom input:checked ~ .chkCheckmark:after {
+    display: block;
+}
+
+.chkCustom .chkCheckmark:after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* =================================================== */
+/* Css custom multiple select */
+.multiselect-tags-search {
+    left: -9px !important;
+    top: -6px !important;
+    height: 30px !important;
+    padding: 0px !important;
+    border: none !important;
+}
+
+.multiselect-tags-search:focus {
+    margin-left: 5px !important;
+}
+
+.multiselect {
+    min-height: 32px !important;
+}
+
+.multiselect-tag {
+    font-size: 12px !important;
+    /* line-height: 1.5px !important; */
+}
+
+.multiselect-tag-remove-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.multiselect.is-active {
+    border: 1px solid #66afe9 !important;
+    box-shadow: unset !important;
+}
+
+.multiselect-option {
+    font-size: 12px !important;
+}
+
+.multiselect-no-options,
+.multiselect-no-results {
+    font-size: 12px !important;
+}
+.multiselect-caret,
+.multiselect-clear-icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+.vc-popover-content-wrapper {
+    z-index: 15 !important;
+}
+
+.form-style-1 input,
+.form-style-1 select {
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+}
+
+.multiselect-tags {
+    margin: var(--ms-tag-my, 0.25rem) 0 2px !important;
+}
+
+/* ==================================
+Css Custom v-calendar */
+.vc-popover-caret.direction-bottom.align-left {
+    display: none;
+}
+
+.vc-svg-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.vc-weeks {
+    padding: 12px 24px !important;
+}
+
+.vc-pane {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.051) !important;
+}
+
+/* .vc-header {
+    padding: 24px 24px 0 !important;
+} */
+
+.vc-arrows-container {
+    padding: 24px 24px 0 !important;
+}
+
+.vc-container {
+    margin-top: 4px !important;
+    font-family: Roboto !important;
+    font-size: 1.4rem !important;
+}
+
+.vc-weekday {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
+.input-date {
+    border: 1px solid #e0e1e4;
+    width: 100%;
+    height: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-family: Roboto;
+}
+.input-date:focus {
+    border: 1px solid #50b83c;
+}
+
+.vc-highlight {
+    background-color: #50b83c !important;
+}
+
+.icon-date {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-date-content {
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/icon/calendar.png');
+}
+
+/* Custom radio button */
+.checkRole,
+.radGender {
+    width: 20px;
+    height: 20px;
+}
+
+.txtGender {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.txtGender input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #afafaf;
+    border-radius: 50%;
+}
+
+.txtGender input:checked ~ .checkmark {
+    background-color: #fff;
+    border: 1px solid #50b83c;
+}
+
+.txtGender input:focus ~ .checkmark {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(115, 198, 99, 0.4);
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.txtGender input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.txtGender .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #50b83c;
+}
+
+/*Custom global class*/
+.element-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.element-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Form chi tiết */
+.form {
+    width: 900px;
+    padding: 24px 24px 12px 24px;
+    background-color: var(--grey);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.frm-header-left {
+    display: flex;
+    column-gap: 35px;
+    align-items: center;
+}
+
+.frm-title {
+    color: #1f1f1f;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+.form-element {
+    min-width: 300px;
+}
+
+.form-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+canvas#my-chart-id {
+    max-height: 285px !important;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #012970;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #012970 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.d-flex-justify-around {
+    display: flex;
+    justify-content: space-around;
+    column-gap: 5px;
+    flex-wrap: wrap;
+    padding: 0 30px 0 30px;
+}

@@ -1,0 +1,106 @@
+.body {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.body-header {
+    /* width: calc(100% - 34px); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: absolute; */
+    z-index: 15;
+    top: 0;
+    padding: 16px 16px 16px 0;
+    background-color: #eeeff1;
+}
+
+.body-title {
+    font-size: 2.4rem;
+    color: #1f1f20;
+    font-weight: 700;
+}
+
+.body-content {
+    /* width: 100%;
+    height: calc(100% - 52px);
+    background-color: #fff;
+    box-shadow: 0px 3px 22px rgba(0,0,0,0.039); */
+    flex: 1;
+    /* overflow: auto; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px - 68px);
+    padding-right: 16px;
+    /* padding: 68px 24px 0 0; */
+}
+
+.body-content-top {
+    width: 100%;
+    padding: 12px 20px 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+
+    position: sticky;
+    left: 0;
+    right: 0;
+    z-index: 14;
+}
+
+.top-right {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.top-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.body-content-bottom {
+    background-color: #fff !important;
+    flex: 1;
+    overflow: auto;
+}
+
+.main-content {
+    position: relative;
+    min-width: 100%;
+}
+
+.search-box {
+    min-width: 280px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid black;
+}
+
+.body-table {
+    position: relative;
+    min-width: calc(100% + 24px);
+    /* height: calc(100% - 44px - 68px); */
+    overflow: unset;
+    background-color: #fff;
+}
+
+.body-no-data {
+    position: absolute;
+    z-index: 10;
+    width: calc(100% - 16px);
+    top: 200px;
+    background-image: url(../../../assets/img/noData.svg);
+    background-repeat: no-repeat;
+    height: calc(100% - 200px - 10px);
+    background-position: center 50px;
+    background-color: #fff;
+}
